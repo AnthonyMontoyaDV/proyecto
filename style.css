@@ -1,0 +1,464 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+
+/* ESTILOS CABECERA */
+header {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    flex-direction: column;
+    font-family: "Lexend";
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 80%;
+    padding: 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-img {
+    width: 50%;
+}
+
+.header-img img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.header-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header-nav nav {
+    display: flex;
+}
+
+.header-nav nav ul li a {
+    font-family: "Lexend";
+    font-size: 1em;
+    font-weight: 600;
+    color: #001F3D;
+    text-transform: capitalize;
+}
+
+
+/* ESTILOS HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.contenido-hero h1 {
+    font-size: 5em;
+    margin-bottom: 1rem;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+}
+
+.contenido-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #006fdf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #003c79;
+}
+
+
+/* ESTILOS ABOUT */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-container {
+    width: 80%;
+    padding: 100px 0;
+    gap: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-img img {
+    width: 800px;
+    border-radius: 50px;
+}
+
+.about-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-desc h2 {
+    color: #003c79;
+    font-size: 3.5em;
+    text-align: left;
+    font-weight: 800;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+}
+
+.about-desc p {
+    font-family: "Lexend";
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+
+
+/* COSTA ESTILOS */
+.costa {
+    background-image: url(images/costa.png);
+    padding: 100px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+.costa-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #001F3D;
+    gap: 70px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.costa-container h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+form#consumoRuralForm {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form#consumoRuralForm label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form#consumoRuralForm input[type="number"] {
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-family: "Lexend";
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#consumoRuralForm input[type="number"]:focus {
+    font-family: "Lexend";
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+#resultadoR {
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* ESTILOS SELVA */
+.sierra {
+    background-image: url(images/sierra.png);
+    padding: 100px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+.sierra-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #001F3D;
+    gap: 70px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.sierra-container h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+form#consumoSierraForm {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form#consumoSierraForm label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form#consumoSierraForm input[type="number"] {
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-family: "Lexend";
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#consumoSierraForm input[type="number"]:focus {
+    font-family: "Lexend";
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+#resultadoS {
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* ESTILOS SELVA */
+.selva {
+    background-image: url(images/selva.png);
+    padding: 100px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+.selva-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #001F3D;
+    gap: 70px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.selva-container h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+form#consumoSelvaForm {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form#consumoSelvaForm label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form#consumoSelvaForm input[type="number"] {
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-family: "Lexend";
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#consumoSelvaForm input[type="number"]:focus {
+    font-family: "Lexend";
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+#resultadoSelva {
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* ESTILOS URBANO */
+.urbano {
+    background-image: url(images/urbano.png);
+    padding: 100px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+.urbano-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #001F3D;
+    gap: 70px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.urbano-container h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+form#consumoForm {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form#consumoForm label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form#consumoForm input[type="number"] {
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-family: "Lexend";
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#consumoForm input[type="number"]:focus {
+    font-family: "Lexend";
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

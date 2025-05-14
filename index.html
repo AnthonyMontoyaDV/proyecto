@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Cuidemos el agua</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="header-img">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="header-nav">
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">inicio</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#about">quienes somos</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#costa">consumo rural costa</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#sierra">consumo rural sierra</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#selva">consumo rural selva</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#urbano">consumo urbano</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop class="video-fondo">
+            <source src="images/video-fondo.mp4" type="video/mp4">
+        </video>
+
+        <div class="contenido-hero">
+            <h1>Aprendamos a cuidar el agua</h1>
+            <a href="#" class="btn">Conoce más</a>
+        </div>
+    </section>
+
+
+    <section class="about-us" id="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="images/about-img.jpg" alt="">
+            </div>
+            <div class="about-desc">
+                <h2>Somos los Guardianes
+                    del Consumo del Agua</h2>
+                <p>Interesados en formar una conciencia social cada vez más identificada con los valores de preservación
+                    del agua y el medio ambiente, entre la ciudadanía.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="costa" id="costa">
+        <div class="costa-container">
+            <h2>Consumo Rural Costa</h2>
+
+            <form id="consumoRuralForm" oninput="calcularRural()">
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input type="number" id="consumoM3R" placeholder="Consumo (m³)" required>
+                    <input type="number" id="habitantesR" placeholder="N° de habitantes por familia" required>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%; display: none;">
+                    <input type="number" id="consumoPersonaR" placeholder="Consumo por persona (lt)" required>
+                    <input type="number" id="consumoLtR" placeholder="Consumo (lt)" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%; display: none;">
+                    <input type="number" id="consumoDiarioR" placeholder="Consumo diario (lt)" readonly>
+                    <input type="number" id="dotacionR" value="90" placeholder="Dotación (lt/hab/día)" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input style="width: 100%;" type="number" id="consumoMesR" placeholder="Dias en el mes">
+                </div>
+
+                <div id="resultadoR" style="margin-top: 10px; font-weight: bold;"></div>
+            </form>
+        </div>
+    </section>
+
+    <section class="sierra" id="sierra">
+        <div class="sierra-container">
+            <h2>Consumo Rural Sierra</h2>
+
+            <form id="consumoSierraForm" oninput="calcularSierra()">
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input type="number" id="consumoM3S" placeholder="Consumo (m³)" required>
+                    <input type="number" id="habitantesS" placeholder="N° de habitantes por familia" required>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%; display: none;">
+                    <input type="number" id="consumoPersonaS" placeholder="Consumo por persona (lt)" required>
+                    <input type="number" id="consumoLtS" placeholder="Consumo (lt):" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%; display: none;">
+                    <input type="number" id="consumoDiarioS" placeholder="Consumo diario (lt):" readonly>
+                    <input type="number" id="dotacionS" value="80" placeholder="Dotación (lt/hab/día):" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input style="width: 100%;" type="number" id="consumoMesS" placeholder="Dias en el mes">
+                </div>
+
+                <div id="resultadoS" style="margin-top: 10px; font-weight: bold;"></div>
+            </form>
+        </div>
+    </section>
+
+    <section class="selva" id="selva">
+        <div class="selva-container">
+            <h2>Consumo Rural selva</h2>
+
+            <form id="consumoSelvaForm" oninput="calcularSelva()">
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input type="number" id="consumoM3Selva" placeholder="Consumo (m³)" required>
+                    <input type="number" id="habitantesSelva" placeholder="N° de habitantes por familia" required>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%; display: none;">
+                    <input type="number" id="consumoPersonaSelva" placeholder="Consumo por persona (lt)" required>
+                    <input type="number" id="consumoLtSelva" placeholder="Consumo (lt):" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%; display: none;">
+                    <input type="number" id="consumoDiarioSelva" placeholder="Consumo diario (lt)" readonly>
+                    <input type="number" id="dotacionSelva" value="100" placeholder="Dotación (lt/hab/día):" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input style="width: 100%;" type="number" id="consumoMesSelva" placeholder="Dias en el mes">
+                </div>
+
+                <div id="resultadoSelva" style="margin-top: 10px; font-weight: bold;"></div>
+            </form>
+        </div>
+    </section>
+
+    <section class="urbano" id="urbano">
+        <div class="urbano-container">
+            <h2>Consumo Urbano</h2>
+
+            <form id="consumoForm" oninput="calcular()">
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input type="number" id="consumoM3" placeholder="Consumo (m³)" required>
+                    <input type="number" id="habitantes" placeholder="N° de habitantes por familia" required>
+                </div>
+
+                <div style="display: flex; gap: 50px; width:100%; display: none;">
+                    <input type="number" id="consumoPersona" placeholder="Consumo por persona (lt)" readonly>
+                    <input type="number" id="consumoLt" placeholder="Consumo (lt)" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width:100%; display: none;">
+                    <input type="number" id="consumoDiario" placeholder="Consumo diario (lt)" readonly>
+                    <input type="number" id="dotacion" value="50" placeholder="Dotación (lt/hab/día)" readonly>
+                </div>
+
+                <div style="display: flex; gap: 50px; width: 100%;">
+                    <input style="width: 100%;" type="number" id="consumoMes" placeholder="Días en el mes" required>
+                </div>
+
+                <div id="resultado" style="margin-top: 10px; font-weight: bold;"></div>
+            </form>
+
+        </div>
+    </section>
+
+    <script>
+        function calcular() {
+            const consumoM3 = parseFloat(document.getElementById("consumoM3").value);
+            const habitantes = parseInt(document.getElementById("habitantes").value);
+            const diasMes = parseInt(document.getElementById("consumoMes").value);
+            const dotacionFija = 50;
+
+            if (!isNaN(consumoM3) && !isNaN(habitantes) && habitantes > 0 && !isNaN(diasMes) && diasMes > 0) {
+                const consumoLt = consumoM3 * 1000;
+                const consumoPersona = consumoLt / habitantes;
+                const consumoDiario = consumoLt / diasMes;
+                const dotacionCalculada = consumoLt / (habitantes * diasMes);
+
+                document.getElementById("consumoLt").value = consumoLt.toFixed(2);
+                document.getElementById("consumoPersona").value = consumoPersona.toFixed(2);
+                document.getElementById("consumoDiario").value = consumoDiario.toFixed(2);
+
+                const resultado = document.getElementById("resultado");
+                if (dotacionCalculada <= dotacionFija) {
+                    resultado.innerHTML = `✅ Buen consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (≤ 50)`;
+                    resultado.style.color = "green";
+                } else {
+                    resultado.innerHTML = `⚠️ Mal consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (> 50)`;
+                    resultado.style.color = "red";
+                }
+            } else {
+                document.getElementById("consumoLt").value = "";
+                document.getElementById("consumoPersona").value = "";
+                document.getElementById("consumoDiario").value = "";
+                document.getElementById("resultado").innerHTML = "";
+            }
+        }
+    </script>
+    <script>
+        function calcularSelva() {
+            const consumoM3 = parseFloat(document.getElementById("consumoM3Selva").value);
+            const habitantes = parseInt(document.getElementById("habitantesSelva").value);
+            const diasMes = parseInt(document.getElementById("consumoMesSelva").value);
+            const dotacionFija = 100;
+
+            if (!isNaN(consumoM3) && !isNaN(habitantes) && habitantes > 0 && !isNaN(diasMes) && diasMes > 0) {
+                const consumoLt = consumoM3 * 1000;
+                const consumoPersona = consumoLt / habitantes;
+                const consumoDiario = consumoLt / diasMes;
+                const dotacionCalculada = consumoLt / (habitantes * diasMes);
+
+                document.getElementById("consumoLtSelva").value = consumoLt.toFixed(2);
+                document.getElementById("consumoPersonaSelva").value = consumoPersona.toFixed(2);
+                document.getElementById("consumoDiarioSelva").value = consumoDiario.toFixed(2);
+
+                const resultado = document.getElementById("resultadoSelva");
+                if (dotacionCalculada <= dotacionFija) {
+                    resultado.innerHTML = `✅ Buen consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (≤ 100)`;
+                    resultado.style.color = "green";
+                } else {
+                    resultado.innerHTML = `⚠️ Mal consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (> 100)`;
+                    resultado.style.color = "red";
+                }
+            } else {
+                document.getElementById("consumoLtSelva").value = "";
+                document.getElementById("consumoPersonaSelva").value = "";
+                document.getElementById("consumoDiarioSelva").value = "";
+                document.getElementById("resultadoSelva").innerHTML = "";
+            }
+        }
+    </script>
+    <script>
+        function calcularSierra() {
+            const consumoM3 = parseFloat(document.getElementById("consumoM3S").value);
+            const habitantes = parseInt(document.getElementById("habitantesS").value);
+            const diasMes = parseInt(document.getElementById("consumoMesS").value);
+            const dotacionFija = 80;
+
+            if (!isNaN(consumoM3) && !isNaN(habitantes) && habitantes > 0 && !isNaN(diasMes) && diasMes > 0) {
+                const consumoLt = consumoM3 * 1000;
+                const consumoPersona = consumoLt / habitantes;
+                const consumoDiario = consumoLt / diasMes;
+                const dotacionCalculada = consumoLt / (habitantes * diasMes);
+
+                document.getElementById("consumoLtS").value = consumoLt.toFixed(2);
+                document.getElementById("consumoPersonaS").value = consumoPersona.toFixed(2);
+                document.getElementById("consumoDiarioS").value = consumoDiario.toFixed(2);
+
+                const resultado = document.getElementById("resultadoS");
+                if (dotacionCalculada <= dotacionFija) {
+                    resultado.innerHTML = `✅ Buen consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (≤ 80)`;
+                    resultado.style.color = "green";
+                } else {
+                    resultado.innerHTML = `⚠️ Mal consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (> 80)`;
+                    resultado.style.color = "red";
+                }
+            } else {
+                document.getElementById("consumoLtS").value = "";
+                document.getElementById("consumoPersonaS").value = "";
+                document.getElementById("consumoDiarioS").value = "";
+                document.getElementById("resultadoS").innerHTML = "";
+            }
+        }
+    </script>
+    <script>
+        function calcularRural() {
+            const consumoM3 = parseFloat(document.getElementById("consumoM3R").value);
+            const habitantes = parseInt(document.getElementById("habitantesR").value);
+            const diasMes = parseInt(document.getElementById("consumoMesR").value);
+            const dotacionFija = 90;
+
+            if (!isNaN(consumoM3) && !isNaN(habitantes) && habitantes > 0 && !isNaN(diasMes) && diasMes > 0) {
+                const consumoLt = consumoM3 * 1000;
+                const consumoPersona = consumoLt / habitantes;
+                const consumoDiario = consumoLt / diasMes;
+                const dotacionCalculada = consumoLt / (habitantes * diasMes);
+
+                document.getElementById("consumoLtR").value = consumoLt.toFixed(2);
+                document.getElementById("consumoPersonaR").value = consumoPersona.toFixed(2);
+                document.getElementById("consumoDiarioR").value = consumoDiario.toFixed(2);
+
+                const resultado = document.getElementById("resultadoR");
+                if (dotacionCalculada <= dotacionFija) {
+                    resultado.innerHTML = `✅ Buen consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (≤ 90)`;
+                    resultado.style.color = "green";
+                } else {
+                    resultado.innerHTML = `⚠️ Mal consumo: ${dotacionCalculada.toFixed(2)} lt/hab/día (> 90)`;
+                    resultado.style.color = "red";
+                }
+            } else {
+                document.getElementById("consumoLtR").value = "";
+                document.getElementById("consumoPersonaR").value = "";
+                document.getElementById("consumoDiarioR").value = "";
+                document.getElementById("resultadoR").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
